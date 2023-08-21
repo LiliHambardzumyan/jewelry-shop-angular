@@ -1,0 +1,15 @@
+$m-96: calc(96 / 1440);
+$m-64: calc(64 / 2443);
+$m-98: calc(98 / 2443);
+
+@mixin container {
+  top: calc($m-64 * 100%);
+  bottom: calc($m-98 * 100%);
+  left: calc($m-96 * 100%);
+  right: calc($m-96 * 100%);
+}
+
+.container {
+  position: absolute;
+  @include container;
+}

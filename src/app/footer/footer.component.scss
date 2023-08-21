@@ -1,0 +1,164 @@
+.all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #D8D8D8;
+    justify-self: center;
+    justify-content: center;
+}
+
+.all,
+.top,
+.bottom {
+    display: flex;
+    font-family: 'Myfont1';
+    color: #707070;
+    justify-content: space-between;
+}
+
+.top,
+.bottom {
+    padding-top: 30px;
+}
+
+.bottom {
+    padding-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+}
+
+.topLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.topright {
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.rleft {
+    width: 200px;
+    border: none;
+    outline: none;
+}
+
+.bottleft {
+    display: flex;
+    gap: 4px;
+
+}
+
+.bol {
+    font-weight: bold;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.cts {
+    font-size: 16px;
+    padding-right: 20px;
+    line-height: 27px;
+}
+
+.ic {
+    padding-right: 29px;
+}
+
+.hid {
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: 'Myfont1';
+    src: url(../../assets/fonts/DMSans-Regular.ttf);
+    font-weight: 400;
+
+}
+
+.point:hover {
+    text-decoration: underline;
+}
+
+.topmejt {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .top {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .topmejt {
+        visibility: visible;
+        font-size: 12px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .topright {
+        width: 300px;
+        gap: 50px;
+    }
+
+    .topLeft {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hid {
+        visibility: visible;
+        display: flex;
+
+    }
+
+    .flw {
+        font-size: 12px;
+    }
+
+    .hr {
+        width: 47px;
+        margin-left: 16px;
+    }
+
+    .cts {
+        font-size: 12px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bottleft {
+        font-size: 12px;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        padding-bottom: 30px;
+    }
+
+    .ic {
+        padding-right: 0px;
+        height: 12px;
+        width: 12px;
+    }
+
+    .link {
+        visibility: hidden;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+    }
+}

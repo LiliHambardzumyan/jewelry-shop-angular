@@ -1,0 +1,30 @@
+<div class = "header">
+  <div id = "logo" [routerLink] = "['']">Shoppe</div>
+  <div class = "links">
+    <div id = "shop" [routerLink] = "['/shop']">Shop</div>
+    <div id = "blog" [routerLink] = "['/blog']">Blog</div>
+    <div id = "story" [routerLink] = "['/about-us']">Our Story</div>
+    <div id = "search-input" [ngStyle] = "is_search ? {'width': 'calc((2 * (48 /466) * 100%) - 10px)', 'margin-left': '10px'} : {'width': 'calc((48 /466) * 100%)'}">
+      <input (keyup.enter) = "navigateToShop($event)" [ngStyle] = "is_search ? {'width': '100%'} : {'width': '2px'}" type = "search" placeholder = "search" [(ngModel)] = "keyword">
+    </div>
+    <div id = "search-icon">
+      <img src = "assets/icons/search.svg" (click) = "this.is_search = !this.is_search">
+    </div>
+    <div id = "bag-icon">
+      <img src = "assets/icons/bag.svg" (click) = "this.is_bag = !this.is_bag">
+    </div>
+    <div id = "wishlist">
+      <i class = "fa-regular fa-heart"></i>
+    </div>
+    <div id = "user" [routerLink] = "['/login']">
+      <div *ngIf = "is_logged">{{is_logged}}</div>
+      <img *ngIf="!is_logged" src = 'assets/icons/user.svg'>
+    </div>
+  </div>
+  </div>
+<p [hidden] = "home" class = "line"></p>
+<div *ngIf = "is_bag" (mouseleave) = "this.is_bag = !this.is_bag" class = "bag-container">
+  <div class = "inner-container">
+    <p>Shopping Bag</p>
+  </div>
+</div>

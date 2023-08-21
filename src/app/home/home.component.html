@@ -1,0 +1,27 @@
+<div class = "slide" >
+  <img [src] = "slider[item].imageUrl">
+  <p id = "name">{{slider[item].name}}</p>
+  <p id = "price">{{slider[item].price | currency: '$ '}}</p>
+  <button [routerLink] = "['/product' + '/' + slider[item].id]">View Product</button>
+  <div class = "dots">
+    <div id = 'dot' *ngFor = "let i of [0,1,2,3,4]" (click) = "item = i" ></div>
+  </div>
+</div>
+<div class = "line">
+  <span id = 'latest'>Shop The Latest</span>
+  <a [routerLink] = "['/shop']">View All</a>
+</div>
+<div class = "products-container">
+  <div class = "product"  *ngFor = "let el of items">
+    <div class = "image-icons">
+      <img id = "product-img" [src] = 'el.imageUrl'>
+      <div class = "hover-icons">
+        <div><img src = "assets/icons/bag.svg"></div>
+        <div [routerLink] = "['/product' + '/' + el.id]"><img src = "assets/icons/eye.svg"></div>
+        <div><i [class] = "isliked(el.id)  ? 'fa-solid fa-heart' : 'fa-regular fa-heart'" (click) = "ToLike(el)"></i></div>
+      </div>
+    </div>
+    <p id = 'product-name'>{{el.name}}</p>
+    <p id = "product-price">{{el.price | currency: '$ ':'symbol':'2.0'}}</p>
+  </div>
+</div>

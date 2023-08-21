@@ -1,0 +1,16 @@
+<div class = "container">
+  <div class = "main">
+    <p class = "text">My Account</p>
+    <div class = "buttons">
+      <button class = "sign-in-path" [routerLink] = "['/login']">Sign In</button>
+      <button class = "register-path" [routerLink] = "['/register']">Register</button>
+    </div>
+    <div class = "form" [formGroup] = "loginForm">
+      <div><input type = "text" class = "user-name" formControlName = "username" placeholder = "Username"></div>
+      <div><input type = "password" class = "password" formControlName = "password" placeholder = "Password"></div>
+    </div>
+    <div><input type = "checkbox" class = "checkbox">Remember me</div>
+    <div><button type = "submit" class = "sign-in" (click) = "Submit()">Sign In</button></div>
+    <div class = "reset-link"><a [href] = "['/reset-password']">Have you forgotten your password?</a></div>
+  </div>
+</div>

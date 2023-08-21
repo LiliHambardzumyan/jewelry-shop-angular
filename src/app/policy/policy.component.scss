@@ -1,0 +1,58 @@
+@import 'src/app/font.scss';
+@import 'src/app/font.scss';
+
+.container {
+    text-align: left;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 2%;;
+
+}
+h1 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include heading-1;
+    font-family: DM Sans;
+
+
+
+
+}
+p, ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: DM Sans;
+    line-height: 27px;
+}
+.middle {
+    text-align: left;
+    justify-content: left;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: DM Sans;
+
+
+}
+@media (max-width: 768px) {
+    h1 {
+      font-size: 20px;
+      font-weight: 400;
+
+    }
+    p,ul {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .middle {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+      }

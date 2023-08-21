@@ -1,0 +1,131 @@
+.all {
+  text-align: center;
+  padding: 35px;
+}
+
+.forcont {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cont {
+  font-family: "Myfont2";
+  font-size: 33px;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+
+.txt {
+  font-family: "Myfont1";
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tox1,
+.tox2 {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.inp {
+  outline: #fff;
+  width: 300px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.mess {
+  width: 460px;
+  padding-top: 60px;
+  padding-right: 200px;
+}
+
+.forbtn {
+  padding-top: 45px;
+}
+
+.btn {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Myfont1";
+  font-size: 16px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 200px;
+  padding-right: 200px;
+  cursor: pointer;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: #707070;
+  font-family: "Myfont1";
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@font-face {
+  font-family: "Myfont1";
+  src: url(../../assets/fonts/DMSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Myfont2";
+  src: url(../../assets/fonts/DMSans-Medium.ttf);
+}
+@media only screen and (max-width: 768px) {
+  .all {
+    text-align: left;
+  }
+  .forcont {
+    justify-content: left;
+    padding-bottom: 30px;
+  }
+  .cont {
+    font-size: 20px;
+  }
+  .txt,
+  .none {
+    display: none;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tox1,
+  .tox2 {
+    flex-direction: column;
+  }
+  .mess {
+    width: 18%;
+  }
+  .btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 140px;
+    padding-right: 140px;
+    font-size: 12px;
+  }
+  ::placeholder {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=contact.component.css.map */

@@ -1,0 +1,105 @@
+@import "src/app/colors.scss";
+@import "src/app/font.scss";
+
+.header {
+  position: relative;
+  width: 100%;
+  height: calc((42 / 900) * 100%);
+  margin-bottom: calc((16 / 2443) * 100%);
+  & div {
+    display: inline-block;
+    @include heading-5;
+  }
+  & #logo {
+    cursor: pointer;
+    color: $accent;
+    font: 35px Allerta Stencil;
+    width: 158px;
+    height: 100%;
+    text-transform: uppercase;
+  }
+  & .links {
+    position: absolute;
+    width: calc((518 / 1248) * 100%);
+    left: calc((826 / 1248) * 100%);
+    //margin-top: calc((8 / 106) * 100%);
+    & div {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      height: 100%;
+    }
+    & #blog {
+      margin-left: calc((64 / 1248) * 100%);
+    }
+    & #story {
+      margin-left: calc((64 / 1248) * 100%);
+    }
+    & #search-input {
+      margin-left: calc((48 / 1248) * 100%);
+      transition: ease-out 1.2s;
+      & input {
+        position: relative;
+        left: 0;
+        border: none;
+        border-left: 2px solid $dark-gray;
+        & placeholder {
+          color: $light-gray;
+        }
+        &:focus {
+          outline: none;
+          border-bottom: 1px solid $light-gray;
+        }
+      }
+    }
+    & #search-icon {
+      width: calc((19 / 466) * 100%);
+      height: calc((19 / 42) * 100%);
+      }
+    & #bag-icon {
+      margin-left: calc((30 / 1248) * 100%);
+      width: calc((30 / 466) * 100%);
+      height: calc((21 / 42) * 100%);
+      & img {
+        top: 10px;
+      }
+    }
+    & #wishlist {
+      margin-left: calc((30 / 1248) * 100%);
+      width: calc((30 / 466) * 100%);
+      height: calc((20 / 42) * 100%);
+      & i {
+        font-size: 23px;
+      }
+    }
+    & #user {
+      margin-left: calc((30 / 1248) * 100%);
+      width: calc((30 / 466) * 100%);
+      height: calc((20 / 42) * 100%);
+    }
+  }
+}
+.line {
+  margin-top: calc((17 / 945) * 100%);
+  border-bottom: 1px solid $light-gray;
+}
+.bag-container{
+  position: absolute;
+  height: 106.4%;
+  width: calc((360 / 1440) * 100%);
+  right: -7.6%;
+  top: -2.8%;
+  bottom: -7%;
+  z-index: 1;
+  background-color: white;
+  border: 2px solid $light-gray;
+  transition: width 2s, height 2s, transform 2s;
+  & .inner-container {
+    position: absolute;
+    top: 8%;
+    right: 7%;
+    width: 84%;
+    bottom: 2%;
+    height: 90%;
+  }
+ }
